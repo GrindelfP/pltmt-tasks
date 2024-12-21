@@ -1,12 +1,10 @@
-def parse_grammar(rules):
+def parse_grammar(rules) -> dict:
     grammar = {}
     for rule in rules:
         head, productions = rule.split("->")
         head = head.strip()
         grammar[head] = [' '.join(p.strip()).split() for p in productions.split("|")]
 
-    print(grammar)
-    print(grammar)
     return grammar
 
 
